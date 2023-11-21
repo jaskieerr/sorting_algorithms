@@ -21,11 +21,12 @@ void switch_val(int *val, int *valu)
  */
 void selection_sort(int *array, size_t size)
 {
+	int *min_ptr;
+	size_t i;
+	size_t j;
+
 	if (array == NULL || size < 2)
 		return;
-
-	size_t i, j;
-	int *min_ptr;
 
 	for (i = 0; i < size - 1; i++)
 	{
