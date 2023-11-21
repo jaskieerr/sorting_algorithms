@@ -1,25 +1,25 @@
 #include "sort.h"
 
 /**
- * nodeswap - swaps 2 dll nodes with eachothers
+ * node_swap - swaps 2 dll nodes with each other
  * @head: head ptr
- * @a: node to be swaped num1
- * @b: node to be swaped num2
+ * @a: node to be swapped num1
+ * @b: node to be swapped num2
  */
 void node_swap(listint_t **head, listint_t **a, listint_t *b)
 {
-    (*a)->next = b->next;
+	(*a)->next = b->next;
 
-    if (b->next != NULL)
-        b->next->prev = *a;
-    b->prev = (*a)->prev;
-    b->next = *a;
-    if ((*a)->prev != NULL)
-        (*a)->prev->next = b;
-    else
-        *head = b;
-    (*a)->prev = b;
-    *a = b->prev;
+	if (b->next != NULL)
+		b->next->prev = *a;
+	b->prev = (*a)->prev;
+	b->next = *a;
+	if ((*a)->prev != NULL)
+		(*a)->prev->next = b;
+	else
+		*head = b;
+	(*a)->prev = b;
+	*a = b->prev;
 }
 
 /**
